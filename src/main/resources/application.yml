@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jwt_security
+    username: sergiolaureano
+    password:
+    driver-class-name: org.postgresql.Driver #dependency
+  jpa:
+    hibernate:
+      ddl-auto: create-drop #create and destroy the schema at the end of execution
+    show-sql: true #to see query's when executed hibernate
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect #helps spring performing to write better query's
+
