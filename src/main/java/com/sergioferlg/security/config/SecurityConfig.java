@@ -28,7 +28,7 @@ public class SecurityConfig {
                 .csrf( attribute -> attribute.disable())
                 .authorizeHttpRequests( //we can choose and decide what the urls and the pathways we want to secure
                         authManagerRequestMatcherRegistry -> authManagerRequestMatcherRegistry
-                                .requestMatchers("") //also there is a whitelist - some endpoints that do not need any authentication / tokens - they are open
+                                .requestMatchers("/api/v1/auth/**") //also there is a whitelist - some endpoints that do not need any authentication / tokens - they are open
                                 .permitAll()
                                 .anyRequest()
                                 .authenticated()
